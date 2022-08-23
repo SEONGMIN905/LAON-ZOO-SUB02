@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이용안내</title>
+
+    <link href="images/main_logo.png" rel="icon" type="image/png" sizes="32x32">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	$('.tab .tabs a').on('click',function(){ // 탭메뉴에 있는 링크를 클릭했을때
+		var idx = $(this).parent().index(); // 현재 클릭한 링크의 부모가 몇번째 인지 idx 변수에 넣는다.
+
+		$(this).parent().siblings().removeClass('on'); // 현재 클릭한 링크의 부모를 제외 한 나머지 li에 on클래스를 제거하고
+		$(this).parent().addClass('on'); // 현재 클릭한 링크의 부모 li에 on클래스 넣는다.
+
+		$(this).parent().parent().siblings('.tab_con').removeClass('on');
+		// 현재 클릭한 부모 li의 부모 ul을 제외한 나머지 클래스 .tab_con에 클래스 on을 지워준다.
+
+		$(this).parent().parent().siblings('.tab_con').eq(idx).addClass('on');
+		// 현재 클릭한 부모 li의 부모 ul을 제외한 나머지 클래스 .tab_con을 선택하고 그중 eq번째에 클래스 on을 넣는다.
+
+	});
+	
+});
+
+</script>
+
+</head>
+<body>
+
+     <!--header  s-->
+       
+     <div id="header">
+           
+        <div class="header_inner">
+            
+            <a href="#" class="logo"> 
+                <img src="images/main_logo.png" alt="로고 이미지">
+            </a>
+
+
+            <ul class="link">
+                <li><a href="#">LOGIN</a></li>
+                <li><a href="#">JOIN</a></li>
+            </ul>
+           
+
+               
+            <ul class="nav">
+                <li><a href="#" class="link--elara"> <span>라온 동물원</span></a></li>
+                <li><a href="#" class="link--elara"><span>이용안내</span></a></li>
+                <li><a href="#" class="link--elara"><span>동물 이야기</span></a></li>
+                <li><a href="#" class="link--elara"> <span>프로그램</span></a></li>
+                <li><a href="#" class="link--elara"><span>커뮤니티</span></a></li>       
+            </ul>
+         </div>
+    </div>
+    <!--header  f-->
+
+
+    <div class="banner">
+        <!-- <img src="images/banner2.jpg" alt="배너"> -->
+
+        <div class="banner_text">
+            <h5 class="line"><span>GUIDANCE</span></h5>     <br>
+
+
+            <h1>라온 동물원에 <br>
+                <span>오신 것을 환영합니다!</span> <br>
+                </h1>  <br><br>
+
+
+            <h5><span>이용시간과 요금 한번에 둘러보세요!</span></h5>
+        </div>
+
+
+        <!-- menu   s -->
+
+    <div id="menu">
+
+        <div class="menu_in1">
+
+            <ul>
+
+                <li><a href="#" class="home">HOME </a>></li>
+                <li><a href="#">이용안내</a>></li>
+                <li><a href="#">이용요금과 시간</a></li>
+
+
+            </ul>
+
+        </div>
+
+
+        <div class="menu_in2">
+
+
+            <ul>
+
+                <li><a href="#">이용요금과 시간</a></li>
+                <li><a href="#">시설 안내</a></li>
+                <li><a href="#">오시는 길</a></li>
+
+            </ul>
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+    </div>
+    
+
+    <!-- menu   f -->
+
+
+    <!-- 이용시간, 요금안내 -->
+
+    <h2>이용시간 · 요금안내</h2>
+
+
+    <div id="time">
+
+        <h4>이용시간</h4>
+
+        <h6>연중무휴</h6>
+
+        <h3>09:00 - 18:00</h3>
+
+        <p>※입장 마감시간은 17:00이오니 이용에 참고 부탁드립니다.</p>
+
+
+    </div>
+
+    <div id="text_1">
+
+
+        <img src="images/느낌표.png" alt="느낌표">
+
+        <h3>이용안내</h3>
+
+
+
+        <p> 
+            - 매표 마감시간은 17:00이오며, 입장마감 시간은 17:30까지입니다 <br>
+
+            - 이용 시간은 우천이나 현장 상황에 따라 변경될 수 있습니다.  <br>
+
+            - 전시생물 보호 및 관람환경 유지를 위해 애완동물의 입장은 금하고 있습니다. <br>  
+
+            - 특별전 입장 시 음식물 및 음료 반입이 불가하오니 양해 부탁드립니다.  <br>
+
+            - 킥보드, 자전거, 인라인스케이트 등의 놀이기구 반입은 불가합니다.  <br>
+
+            - 동물들의 건강관리를 위해 외부 먹이는 반입이 불가합니다.  <br>
+
+            - 기타 세부 운영시설 운영시간은 각 매장 별 확인 바랍니다.
+
+        </p>
+
+
+    </div>
+
+
+
+
+
+<!-- 개인요금   s-->
+
+
+
+
+
+
+
+    <h4>이용요금</h4>
+
+
+  
+    
+
+    <div class="tab">
+
+
+        <ul class="tabs type1">
+
+            <li class="on"><a href="#a">개인요금</a></li>
+            
+            <li><a href="#a" class="aa">단체요금</a></li>
+        
+        </ul>	
+        
+
+
+        <div class="tab_con on"> <!--tab_con-->
+
+
+
+
+            <!-- 개인요금   s-->
+
+            <div id="fee_1">
+
+
+                <!-- <h4>이용요금</h4>
+
+                <h3 class="h3">개인요금          단체요금</h3> -->
+            
+
+                <table>
+                        <tr>
+                            <th>구분</th>
+                            <th>종일권</th>
+                            <th>할인 대상자</th>
+                            
+
+                        </tr>
+
+                        <tr>
+                            <td>성인 <br> (만 19세 이상)</td>
+                            <td>18,000원</td>
+                            <td>9,000원</td>
+
+                        </tr>
+
+                        <tr>
+                            <td>청소년 <br> (만 13세~만 8세) </td>
+                            <td>16,000원</td>
+                            <td>8,000원</td>
+
+                        </tr>
+
+                        <tr>
+                            <td>어린이  <br> (36개월~만 12세) </td>
+                            <td> 14,000원</td>
+                            <td>7,000원</td>
+
+                        </tr>
+
+                        <tr>
+                            <td>경로 <br> (만 65세 이상) </td>
+                            <td>14,000원</td>
+                            <td>7,000원</td>
+
+                        </tr>
+
+                </table>
+
+
+            </div>
+
+
+            <div id="fee_1_text">
+
+
+                <img src="images/느낌표.png" alt="느낌표">
+
+                    <h3>개인안내</h3>
+
+
+
+                    <p> 
+                        <span> <strong> 연령에 따른 요금 적용 안내 </strong></span> <br>
+                
+                        - 36개월 미만 : 동물원 입장 무료 (증빙서류 지참 필수 / 직계가족 동반에 한함 / 단체 입장객 제외) <br>
+
+                        - 36개월 이상 ~ 만 12세 : 어린이 요금 적용 <br>
+
+                        - 만 13세 이상 ~ 만 18세 : 청소년 요금 적용 (학교 및 학년 무관) <br>
+
+                        - 만 65세 이상 : 경로 요금 적용  <br> <br>
+
+                        
+
+                        
+                        <span> <strong> 할인 대상자 (본인 외 동반 2인까지 적용) </strong></span>  <br> 
+                        - 장애인은 종합권 기준 50% 할인 적용됩니다.(※장애인 등록증 또는 장애인 복지카드 제시 시 적용) <br>
+                        - 국가유공자는 종합권 성인 기준 50% 할인 적용됩니다.(※국가 유공자증 제시 시 적용) <br>
+
+                    </p>
+
+
+
+            </div>
+
+
+        </div>
+        
+           
+    
+     
+        <div class="tab_con"> <!--tab2 -->
+
+            
+            
+            <!-- 단체요금    s -->
+
+
+            <div id="fee_2">
+            
+
+
+                <table>
+                        <tr>
+                            <th>구분</th>
+                            <th>담당자</th>
+                            <th>연락처</th>
+                            
+
+                        </tr>
+
+                        <tr>
+                            <td>학습/일반단체</td>
+                            <td rowspan="4">18,000원</td>
+                            <td rowspan="4">9,000원</td>
+
+                        </tr>
+
+                        <tr>
+                            <td>인바운드 단체 </td>
+                        
+
+                        </tr>
+
+                        <tr>
+                            <td>기업 단체 </td>
+                        
+
+                        </tr>
+
+                        <tr>
+                            <td>제휴</td>
+                        
+
+
+                        </tr>
+
+
+                </table>
+
+            </div>
+
+
+            <div id="fee_2_text">
+
+                <img src="images/느낌표.png" alt="느낌표">
+
+                    <h3>단체안내</h3>
+
+
+
+                    <p> 
+                        <span> <strong> 학습 단체란? </strong></span> <br>
+                
+                        어린이집 및 유치원, 초, 중, 고등학생에 한하여 학습단체에 해당합니다.  <br>
+                        동물 탐구 및 체험활동과 관림을 통해 관련 지식을 배우는 소중한 경험이 될 것입니다. <br>
+
+                        - 관람인원 15명 이상 시 단체 관람에 해당됩니다. <br>
+                        - 단체는 36개월 미만 무료입장이 적용되지 않습니다.  <br> <br>
+
+                        
+
+                        
+                        <span> <strong> 일반 단체란?  </strong></span>  <br> 
+                        사회복지 기관 등 성인부터 경로에 한하여 관람하시는 단체를 말합니다. <br> <br>
+
+
+                        <span> <strong> 인바운드 단체란?  </strong></span>  <br> 
+                        외국인을 유치하는 인바운드 여행사 및 기관 등을 방문하는 단체를 말합니다. <br>
+                        -관람인원 10명 이상 시 가이드/TC(투어 리더) 무료입장 적용됩니다. <br> <br>
+
+
+
+                        <span> <strong> 기업 단체란?  </strong></span>  <br> 
+                        일반 기업체/관공서/지역 커뮤니티 맘 카페 등을 말합니다. <br>
+
+                        - 임직원(가족) 또는 고객 초청행사, 사내 단합대회 등 단체관람이 가능하며, 단체 기준은 15인 이상부터 적용됩니다. <br>
+
+
+                    </p>
+
+                
+                
+            </div>
+            
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+<!-- 단체요금    f -->
+
+
+
+
+
+
+<!-- footer   s -->
+
+
+     <div id="footer">
+
+            
+        <div class="footer_in">
+            
+            
+            <p class="f_logo">
+                <a href="#"><img src="images/footer_logo.png" alt="라온 동물원 로고" ></a>
+
+            </p>
+
+
+            <!-- <div class="f_logo">
+                <a href="#">
+                    <img src="images/footer_logo.png" alt="라온 동물원 로고" >
+                </a>
+            </div> -->
+        
+
+            <div class="left">  
+
+                        
+
+                <ul>
+                    <li><a href="#">라온 동물원 소개</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인 정보처리 방침</a></li>
+                </ul>    
+
+                 <br> <br>
+                    <p>
+                        부산광역시 부산진구 새싹로 295-1(초읍동) 라온 동물원 <br>
+                        대표자 : 이라온 │ 사업자 등록번호 : 233-77-77777       <br>                 
+                        통신판매업신고번호 : 제 2022- 부산진구 - 0707호
+                    </p>
+
+               
+
+            </div>          
+
+                  
+            <div class="right">
+               
+
+                <ul>
+                    <li><a href="#"><img src="images/footer_1.png" alt="유튜브"></a></li>
+                    <li><a href="#"><img src="images/footer_2.png" alt="인스타"></a></li>
+                    <li><a href="#" class="aa"><img src="images/footer_3.png" alt="페이스북"></a></li>
+
+                </ul>
+                <br> <br>
+
+                
+                <p class="right">고객 만족센터 <br>
+                    051-777-7777
+                </p>
+
+                
+             </div>
+
+        </div>    
+                
+
+
+        
+
+
+    </div>
+
+    <!-- Foooter    f -->
+
+
+    <a href="#" class="top"></a>
+
+
+    
+
+
+
+
+</body>
+</html>
